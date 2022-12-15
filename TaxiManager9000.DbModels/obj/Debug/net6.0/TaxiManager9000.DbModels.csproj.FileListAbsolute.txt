@@ -1,0 +1,12 @@
+C:\Users\Darko\source\repos\TaxiManager9000\TaxiManager9000.DbModels\bin\Debug\net6.0\TaxiManager9000.DbModels.deps.json
+C:\Users\Darko\source\repos\TaxiManager9000\TaxiManager9000.DbModels\bin\Debug\net6.0\TaxiManager9000.DbModels.dll
+C:\Users\Darko\source\repos\TaxiManager9000\TaxiManager9000.DbModels\bin\Debug\net6.0\TaxiManager9000.DbModels.pdb
+C:\Users\Darko\source\repos\TaxiManager9000\TaxiManager9000.DbModels\obj\Debug\net6.0\TaxiManager9000.DbModels.csproj.AssemblyReference.cache
+C:\Users\Darko\source\repos\TaxiManager9000\TaxiManager9000.DbModels\obj\Debug\net6.0\TaxiManager9000.DbModels.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Darko\source\repos\TaxiManager9000\TaxiManager9000.DbModels\obj\Debug\net6.0\TaxiManager9000.DbModels.AssemblyInfoInputs.cache
+C:\Users\Darko\source\repos\TaxiManager9000\TaxiManager9000.DbModels\obj\Debug\net6.0\TaxiManager9000.DbModels.AssemblyInfo.cs
+C:\Users\Darko\source\repos\TaxiManager9000\TaxiManager9000.DbModels\obj\Debug\net6.0\TaxiManager9000.DbModels.csproj.CoreCompileInputs.cache
+C:\Users\Darko\source\repos\TaxiManager9000\TaxiManager9000.DbModels\obj\Debug\net6.0\TaxiManager9000.DbModels.dll
+C:\Users\Darko\source\repos\TaxiManager9000\TaxiManager9000.DbModels\obj\Debug\net6.0\refint\TaxiManager9000.DbModels.dll
+C:\Users\Darko\source\repos\TaxiManager9000\TaxiManager9000.DbModels\obj\Debug\net6.0\TaxiManager9000.DbModels.pdb
+C:\Users\Darko\source\repos\TaxiManager9000\TaxiManager9000.DbModels\obj\Debug\net6.0\ref\TaxiManager9000.DbModels.dll

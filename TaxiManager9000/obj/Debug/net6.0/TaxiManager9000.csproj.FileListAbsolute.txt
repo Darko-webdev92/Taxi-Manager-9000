@@ -1,0 +1,15 @@
+C:\Users\Darko\source\repos\TaxiManager9000\TaxiManager9000\bin\Debug\net6.0\TaxiManager9000.exe
+C:\Users\Darko\source\repos\TaxiManager9000\TaxiManager9000\bin\Debug\net6.0\TaxiManager9000.deps.json
+C:\Users\Darko\source\repos\TaxiManager9000\TaxiManager9000\bin\Debug\net6.0\TaxiManager9000.runtimeconfig.json
+C:\Users\Darko\source\repos\TaxiManager9000\TaxiManager9000\bin\Debug\net6.0\TaxiManager9000.dll
+C:\Users\Darko\source\repos\TaxiManager9000\TaxiManager9000\bin\Debug\net6.0\TaxiManager9000.pdb
+C:\Users\Darko\source\repos\TaxiManager9000\TaxiManager9000\obj\Debug\net6.0\TaxiManager9000.csproj.AssemblyReference.cache
+C:\Users\Darko\source\repos\TaxiManager9000\TaxiManager9000\obj\Debug\net6.0\TaxiManager9000.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Darko\source\repos\TaxiManager9000\TaxiManager9000\obj\Debug\net6.0\TaxiManager9000.AssemblyInfoInputs.cache
+C:\Users\Darko\source\repos\TaxiManager9000\TaxiManager9000\obj\Debug\net6.0\TaxiManager9000.AssemblyInfo.cs
+C:\Users\Darko\source\repos\TaxiManager9000\TaxiManager9000\obj\Debug\net6.0\TaxiManager9000.csproj.CoreCompileInputs.cache
+C:\Users\Darko\source\repos\TaxiManager9000\TaxiManager9000\obj\Debug\net6.0\TaxiManager9000.dll
+C:\Users\Darko\source\repos\TaxiManager9000\TaxiManager9000\obj\Debug\net6.0\refint\TaxiManager9000.dll
+C:\Users\Darko\source\repos\TaxiManager9000\TaxiManager9000\obj\Debug\net6.0\TaxiManager9000.pdb
+C:\Users\Darko\source\repos\TaxiManager9000\TaxiManager9000\obj\Debug\net6.0\TaxiManager9000.genruntimeconfig.cache
+C:\Users\Darko\source\repos\TaxiManager9000\TaxiManager9000\obj\Debug\net6.0\ref\TaxiManager9000.dll

@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "TaxiManager9000.InterfaceModels/1.0.0": {
+        "runtime": {
+          "TaxiManager9000.InterfaceModels.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "TaxiManager9000.InterfaceModels/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
