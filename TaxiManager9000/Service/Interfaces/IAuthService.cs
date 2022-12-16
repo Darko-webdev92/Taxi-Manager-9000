@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace TaxiManager9000.Service.Interfaces
 {
-    internal class IAuthService
+    public interface IAuthService
     {
+        bool ChangePassword(string username, string password);  
     }
 }

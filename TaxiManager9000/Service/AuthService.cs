@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using TaxiManager9000.Models;
 using TaxiManager9000.Models.Enums;
+using TaxiManager9000.Service.Interfaces;
 
 namespace TaxiManager9000.Service
 {
@@ -67,7 +68,7 @@ namespace TaxiManager9000.Service
         }
 
 
-        public static bool changePassword(string username,string password)
+        public static bool ChangePassword(string username,string password)
         {
             var res = StaticDb.users.Where(x => x.Username == username).FirstOrDefault();
             if(res == null)
