@@ -225,13 +225,13 @@ while (true)
                 Console.WriteLine("1. List all drivers");
                 Console.WriteLine("2. Taxi License Status");
                 Console.WriteLine("3. Assign Unassigned Drivers");
-                Console.WriteLine("4 Change password");
-
-                Console.WriteLine("5: Exit application");
+                Console.WriteLine("4 Unasign Assigned Drivers");
+                Console.WriteLine("5 Change password");
+                Console.WriteLine("6: Exit application");
 
 
                 option = Console.ReadLine();
-                if (option != "1" && option != "2" && option != "3" && option != "4")
+                if (option != "1" && option != "2" && option != "3" && option != "4" && option != "5" && option != "6")
                 {
                     Console.WriteLine("Please enter valid option");
                     Thread.Sleep(2000);
@@ -326,10 +326,6 @@ while (true)
                         }
                         bool IsShiftConvertionSucess = int.TryParse(inputUserId, out int shiftNum);
 
-                        if (AvailableDriver != null)
-                        {
-                            AvailableDriver.Shift = (Shift)shiftNum;
-                        }
 
 
                         var availableCars = StaticDb.cars.Where(x => (DateTime.Now < x.LicensePlateExpieryDate)).ToList();
@@ -340,47 +336,120 @@ while (true)
                             {
                                 foreach (var car in availableCars.ToList())
                                 {
-                                    if (car.Id == driver.CarId && driver.Shift == AvailableDriver.Shift)
+                                    if (car.Id == driver.CarId && driver.Shift == (Shift)shiftNum)
                                     {
                                         availableCars.Remove(car);
                                     }
                                 }
                             }
                         }
-
-                        Console.WriteLine("Available cars");
-                        foreach (var car in availableCars)
+                        if(availableCars.Count != 0)
                         {
-                            Console.WriteLine($"{car.Id} {car.Model}");
+                            Console.WriteLine("Available cars");
+                            foreach (var car in availableCars)
+                            {
+                                Console.WriteLine($"{car.Id} {car.Model}");
+                            }
+
+
+                            Console.WriteLine("Choose car");
+
+                            foreach (var car in availableCars)
+                            {
+                                Console.WriteLine($"{car.Id} {car.Model}");
+                            }
+
+
+                            string UserCardId = Console.ReadLine();
+                            int carId = 0;
+                            bool successCar = int.TryParse(UserCardId, out carId);
+                            bool cussCar = AvailableDrivers.Any(x => x.Id == userId);
+
+                            while ((cussCar == false) || (successCar && false))
+                            {
+                                Console.WriteLine("Please Select car from the list");
+                                inputUserId = Console.ReadLine();
+
+                                successCar = int.TryParse(inputUserId, out userId);
+                                cussCar = AvailableDrivers.Any(x => x.Id == userId);
+                            }
+
+                            if (AvailableDriver != null)
+                            {
+                                AvailableDriver.Shift = (Shift)shiftNum;
+                            }
                         }
+                        else
+                        {
+
+                            Console.WriteLine("There are no available cars");
+                            Thread.Sleep(2000);
+                            Console.Clear();
+                        }
+
                         break;
 
                     }
 
                 }
 
-                //if(option == "4")
-                //{
-                //    Console.WriteLine("Change Password");
-                //    bool changePass = AuthService.changePassword(username, passwrod);
-                //    if (changePass)
-                //    {
-                //        Console.WriteLine("Password sucessfully changed");
-                //    }
-                //    continue;
-                //}
+                if(option == "4")
+                {
+                    var drivers = StaticDb.drivers.Where(x => x.CarId != null).ToList();
+                    foreach (var driver in drivers)
+                    {
+                        Console.WriteLine($"{driver.Id} {driver.FirstName} {driver.LastName}");
+                    }
 
-                //if(option == "5")
-                //{
-                //    option = "4";
-                //}
-                //}
-                Console.Clear();
+                    Console.WriteLine("Select a user ");
+                    string inputUserId = Console.ReadLine();
+                    int userId = 0;
+                    bool success = int.TryParse(inputUserId, out userId);
+                    bool cuss = drivers.Any(x => x.Id == userId);
+
+                    while ((cuss == false) || (success && false))
+                    {
+                        Console.WriteLine("Please Select user from the list");
+                        inputUserId = Console.ReadLine();
+
+                        success = int.TryParse(inputUserId, out userId);
+                        cuss = drivers.Any(x => x.Id == userId);
+                    }
+
+                    var driverForUnisign = drivers.FirstOrDefault(x => x.Id == userId);
+                    driverForUnisign.CarId = null;
+                    driverForUnisign.Shift = Shift.NoShift;
+
+                    Thread.Sleep(2000);
+                    Console.Clear();
+                    continue;
+                }
 
 
+                if (option == "5")
+                {
+                    Console.Clear();
+                    Console.WriteLine("Change Password");
+                    Console.Write("Old password: ");
+                    string oldPassword = Console.ReadLine();
+
+                    bool changePass = AuthService.changePassword(username, oldPassword);
+                    if (changePass)
+                    {
+                        Console.WriteLine("Password sucessfully changed");
+
+                    }
+                    Thread.Sleep(2000);
+                    Console.Clear();
+                }
+
+                if (option == "6")
+                {
+                    option = "4";
+                }
+            
+            Console.Clear();
             }
-
-
         }
         if (option == "4")
         {
@@ -388,26 +457,4 @@ while (true)
         }
     }
     break;
-}
-
-void MainMenu(string username, string password)
-{
-    var user = StaticDb.users.Where(u => u.Username == username).FirstOrDefault();
-    if (user.Role == Role.Administrator)
-    {
-        Console.WriteLine("1. New User");
-        string input = Console.ReadLine();
-        int menu;
-        bool success = int.TryParse(input, out menu);
-        if (success)
-        {
-            switch (menu)
-            {
-                case 1:
-
-                    break;
-            }
-        }
-
-    }
 }
